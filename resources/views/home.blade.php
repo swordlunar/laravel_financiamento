@@ -8,7 +8,7 @@
                 <div class="panel-heading">Dashboard</div>
 
                 <div class="panel-body">
-                    You are logged in!
+                    Você está Logado no Sistema de Financiamento de Projetos!
                 </div>
             </div>
         </div>
