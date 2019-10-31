@@ -16,8 +16,12 @@ class CreateProjetoTable extends Migration
             $table->increments('id');
             $table->string('nome_projeto', 200);
             $table->text('descricao_projeto');
-            $table->string('custo_projeto', 6, 2);
+            $table->decimal('custo_projeto', 7, 2);
+            $table->decimal('custo_atual_projeto', 7, 2);
+            $table->integer('status_projeto')->default('1');
             $table->integer('tempo_de_desenvolvimento');
+            $table->string('foto1_projeto', 2000);
+            $table->string('foto2_projeto', 2000);
             $table->timestamps('criado_em');
 
         });

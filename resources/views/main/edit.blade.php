@@ -3,9 +3,10 @@
 @section('content')
 <div class="container">
     <div class="col-md-12"></div>
-        <form action ="{{ route('projeto.update', ['projeto' => $projeto->id]) }}" class="form-horizontal" method='POST'>
+        <form action ="{{ route('projeto.update', ['projeto' => $projeto->id_projeto]) }}" class="form-horizontal" method='POST'>
         {{csrf_field()}}
         {{ method_field('PUT') }}
+  
             <div class="row">
             <div class="form-group">
                 <label>Nome do Projeto</label>

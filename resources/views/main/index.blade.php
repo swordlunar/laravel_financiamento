@@ -18,9 +18,9 @@
                 <td>{{ $projeto->nome_projeto }}</td>
                 <td>{{ $projeto->custo_projeto }}</td>
                 <td>
-                        <a href="{{ route('projeto.show', ['projeto' => $projeto->id]) }}">Visualizar</a>
-                        <a href="{{ route('projeto.edit', ['projeto' => $projeto->id]) }}">Editar</a>
-                        <a href="{{ route('projeto.destroy', ['projeto' => $projeto->id]) }}">Apagar</a>
+                        <a href="{{ route('projeto.show', ['projeto' => $projeto->id_projeto]) }}">Visualizar</a>
+                        <a href="{{ route('projeto.edit', ['projeto' => $projeto->id_projeto]) }}">Editar</a>
+                        <a href="{{ route('projeto.destroy', ['projeto' => $projeto->id_projeto]) }}">Apagar</a>
                 </td>
                 </tr>
                 @endforeach
