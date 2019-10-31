@@ -23,12 +23,15 @@
         .fa-btn {
             margin-right: 6px;
         }
+       li{
+            color: white;
+        }
     </style>
 </head>
 <body id="app-layout">
-    <nav class="navbar navbar-default navbar-static-top">
+    <nav class="navbar navbar-default navbar-static-top" style="background-color: #007680">
         <div class="container">
-            <div class="navbar-header">
+            <div class="navbar-header" style="color: white">
 
                 <!-- Collapsed Hamburger -->
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
@@ -39,15 +42,15 @@
                 </button>
 
                 <!-- Branding Image -->
-                <a class="navbar-brand" href="{{ url('/') }}">
+                <a class="navbar-brand" href="{{ url('/') }} " style="color: white">
                     Sistema de Financiamento
                 </a>
             </div>
 
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
                 <!-- Left Side Of Navbar -->
-                <ul class="nav navbar-nav">
-                    <li><a href="{{ url('/home') }}">Início</a></li>
+                <ul class="nav navbar-nav" style="color: white">
+                    <li><a href="{{ url('/home') }}" style="color: white">Início</a></li>
                 </ul>
 
                 <!-- Right Side Of Navbar -->

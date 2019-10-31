@@ -31,7 +31,7 @@
             </div>
             <div class="row">
             <div class="form-group">
-            <button type="submit" class="btn btn-default">Enviar</button>
+            <button type="submit" class="btn btn-primary">Enviar</button>
         </div>
         </div>
         </form>
