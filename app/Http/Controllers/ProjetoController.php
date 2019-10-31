@@ -10,6 +10,11 @@ use App\projeto;
 
 class ProjetoController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function index(){
         $projetos = projeto::all();
         //$total = projeto::all()->count();
