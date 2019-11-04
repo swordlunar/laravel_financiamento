@@ -37,6 +37,11 @@ class ProjetoController extends Controller
        return view('main.show')->with(['projeto' => $projeto]);
     }
 
+    public function mostrar_especifico($id){
+        $projeto = projeto::where('id_criador', $id)->get();
+       return view('main.projetoscriados')->with(['projeto' => $projeto]);
+    }
+
     public function edit($id){
         $projeto = projeto::find($id);
        return view('main.edit')->with(['projeto' => $projeto]);

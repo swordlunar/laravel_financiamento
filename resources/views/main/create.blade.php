@@ -7,6 +7,7 @@
         {{csrf_field()}}
             <div class="row">
             <div class="form-group">
+            <input hidden type="hidden" class="form-control" name="id_criador" value="{{ Auth::user()->id }}">
                 <label>Nome do Projeto</label>
                 <input type="text" class="form-control" name="nome_projeto">
                 </div>

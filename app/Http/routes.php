@@ -22,3 +22,5 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('/projeto', 'ProjetoController', ['except' => ['destroy']]);
 
 Route::get('/projeto/{projeto}/delete', 'ProjetoController@destroy')->name('projeto.destroy');
+
+Route::get('/projeto/{projeto}/mostrar', 'ProjetoController@mostrar_especifico')->name('projeto.mostrar');
