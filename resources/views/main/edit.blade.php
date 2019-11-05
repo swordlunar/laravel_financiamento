@@ -31,6 +31,30 @@
                 <input type="text" class="form-control" name="tempo_de_desenvolvimento" value="{{ old('projeto', $projeto->tempo_de_desenvolvimento) }}">
             </div>
             </div>
+            @if ($projeto->status_projeto == 1)
+
+            <div class="row">
+            <div class="form-group">
+                <label>Status Projeto:</label>
+                <select class="form-control" name="status_projeto">
+                    <option value="1">Ativo</option>
+                    <option value="0">Desativo</option>
+                </select>
+            </div>
+            </div>
+
+            @else
+
+            <div class="row">
+            <div class="form-group">
+                <label>Status Projeto:</label>
+                <select class="form-control" name="status_projeto">
+                    <option value="0">Desativo</option>
+                    <option value="1">Ativo</option>
+                </select>
+            </div>
+            </div>
+            @endif
             <div class="row">
             <div class="form-group">
             <button type="submit" class="btn btn-default">Editar Projeto</button>

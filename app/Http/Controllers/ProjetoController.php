@@ -16,7 +16,7 @@ class ProjetoController extends Controller
     }
 
     public function index(){
-        $projetos = projeto::all();
+        $projetos = projeto::where('status_projeto', 1)->get();
         //$total = projeto::all()->count();
         return view('main.index')->with(['projetos' => $projetos]);
     }
