@@ -10,8 +10,6 @@
                 {{ $projeto->custo_projeto}}
             <h3> Tempo Para Desenvolvimento do Projeto: </h3>
                 {{ $projeto->tempo_de_desenvolvimento}}
-            <h3> Id Usuário: </h3>
-                {{ Auth::user()->id }}
         </div>
     </div>
 @endsection
