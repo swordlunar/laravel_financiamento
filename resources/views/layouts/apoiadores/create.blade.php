@@ -19,7 +19,7 @@
                 <td>{{ $projeto->custo_projeto }}</td>
                 <td>
                         <a href="{{ route('projeto.show', ['projeto' => $projeto->id_projeto]) }}">Visualizar</a>
-                        <a href="{{ route('apoiadores_projeto.create', ['projeto' => $projeto->id_projeto]) }}">Apoiar</a>
+                        <a href="{{ route('apoiadores_projeto.store', ['projeto' => $projeto->id_projeto]) }}">Visualizar</a>
                         <!--<a href="{{ route('projeto.edit', ['projeto' => $projeto->id_projeto]) }}">Editar</a>
                         <a href="{{ route('projeto.destroy', ['projeto' => $projeto->id_projeto]) }}">Apagar</a>-->
                 </td>
