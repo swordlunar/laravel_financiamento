@@ -10,6 +10,8 @@ use App\apoiadores_projeto;
 
 use App\projeto;
 
+use config\imgur;
+
 class ApoiadoresProjetoController extends Controller
 {
     public function __construct()
@@ -17,9 +19,8 @@ class ApoiadoresProjetoController extends Controller
         $this->middleware('auth');
     }
 
-    public function create($id){
-        $projeto = projeto::find($id);
-        return view('apoiadores.create')->with(['projeto' => $projeto]);
+    public function create(){
+        return view('apoiadores.create');
     }
 
     public function store(Request $request){
@@ -39,5 +40,49 @@ class ApoiadoresProjetoController extends Controller
     public function show($id){
         $projeto = projeto::find($id);
         return view('apoiadores.show')->with(['projeto' => $projeto]);
+    }
+
+    public function upload(Request $request)
+    {
+
+        /*
+        * O campo do form com o arquivo tinha o atributo name="file".
+        */
+        $file = $request->file('imagem1');
+
+        $image = Imgur::upload($file);
+
+        dd($image->link());
+
+        /*if (empty($file)) {
+            abort(400, 'Nenhum arquivo foi enviado.');
+        }
+
+        $path = $file->store('uploads');
+
+        // Faça qualquer coisa com o arquivo enviado...*/
+
+    }
+
+    public function update(Request $request)
+    {
+
+        /*
+        * O campo do form com o arquivo tinha o atributo name="file".
+        */
+        $file = $request->file('imagem1');
+
+        $image = Imgur::upload($file);
+
+        dd($image->link());
+
+        /*if (empty($file)) {
+            abort(400, 'Nenhum arquivo foi enviado.');
+        }
+
+        $path = $file->store('uploads');
+
+        // Faça qualquer coisa com o arquivo enviado...*/
+
     }
 }

@@ -26,3 +26,5 @@ Route::resource('/apoiadores_projeto', 'ApoiadoresProjetoController', ['except' 
 Route::get('/projeto/{projeto}/delete', 'ProjetoController@destroy')->name('projeto.destroy');
 
 Route::get('/projeto/{projeto}/mostrar', 'ProjetoController@mostrar_especifico')->name('projeto.mostrar');
+
+Route::get('/apoiadores_projeto/upload', 'ProjetoController@upload')->name('apoiadores_projeto.upload');

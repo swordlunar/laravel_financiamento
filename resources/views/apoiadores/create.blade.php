@@ -1,15 +1,17 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container">
-        <div class="col-md-12">
-            <h3> Você está visualizando o projeto: {{ $projeto->nome_projeto}}</h3>
-            <h3> Descrição do Projeto: </h3>
-                {{ $projeto->descricao_projeto}}
-            <h3> Custo do Projeto: </h3>
-                {{ $projeto->custo_projeto}}
-            <h3> Tempo Para Desenvolvimento do Projeto: </h3>
-                {{ $projeto->tempo_de_desenvolvimento}}
-        </div>
-    </div>
+<form action ="{{ route('apoiadores_projeto.upload') }}" method='POST'>
+                        {{csrf_field()}}
+                        <input name="_method" type="hidden" value="PATCH">
+                        <div class="form-group">
+                            <label for="recipient-name" class="col-form-label">Selecione o Arquivo:</label>
+                            <input type="file" class="form-control" name="imagem1">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                        <button type="submit" class="btn btn-primary">Enviar</button>
+                    </div>
+                    </form>
 @endsection

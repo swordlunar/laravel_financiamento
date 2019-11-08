@@ -71,6 +71,7 @@
                     @else
                     <li><a href="{{ url('/projeto') }}" style="color: white">Projetos</a></li>
                     <li><a href="{{ url('/projeto/create') }}" style="color: white">Criar Projeto</a></li>
+                    <li><a href="{{ url('/apoiadores_projeto/create') }}" style="color: white">Upload Imagem</a></li>
                     <li><a href="{{ route('projeto.mostrar', [auth()->user()->id]) }}" style="color: white">Projetos Criados</a></li>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" style="color: white">
