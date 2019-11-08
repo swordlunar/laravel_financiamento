@@ -16,16 +16,21 @@
             <tbody>
                 <tr>
                 @foreach($projetos as $projeto)
-                <td>{{ $projeto->nome_projeto }}</td>
-                <td>{{ $projeto->custo_projeto }}</td>
-                <td>{{ $projeto->custo_atual_projeto }}</td>
-                <td>
-                        <!--<a href="{{ route('projeto.show', ['projeto' => $projeto->id_projeto]) }}">Visualizar</a>-->
-                        <a href="{{ route('apoiadores_projeto.show', ['projeto' => $projeto->id_projeto]) }}">Apoiar</a>
-                        <!--<a href="{{ route('projeto.edit', ['projeto' => $projeto->id_projeto]) }}">Editar</a>
-                        <a href="{{ route('projeto.destroy', ['projeto' => $projeto->id_projeto]) }}">Apagar</a>-->
-                </td>
-                </tr>
+
+                @if ($projeto->id_criador != Auth::user()->id )
+                    <td>{{ $projeto->nome_projeto }}</td>
+                    <td>{{ $projeto->custo_projeto }}</td>
+                    <td>{{ $projeto->custo_atual_projeto }}</td>
+                    <td>
+                            <!--<a href="{{ route('projeto.show', ['projeto' => $projeto->id_projeto]) }}">Visualizar</a>-->
+                            <a href="{{ route('apoiadores_projeto.show', ['projeto' => $projeto->id_projeto]) }}">Apoiar</a>
+                            <!--<a href="{{ route('projeto.edit', ['projeto' => $projeto->id_projeto]) }}">Editar</a>
+                            <a href="{{ route('projeto.destroy', ['projeto' => $projeto->id_projeto]) }}">Apagar</a>-->
+                    </td>
+                    </tr>
+                @else
+                    </tr>
+                @endif
                 @endforeach
             </tbody>
             </table>
