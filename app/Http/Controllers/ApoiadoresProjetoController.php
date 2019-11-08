@@ -23,10 +23,17 @@ class ApoiadoresProjetoController extends Controller
     }
 
     public function store(Request $request){
-        apoiadores_projeto::create($request->all());
-        $projetos = projeto::where('status_projeto', 1)->get();
-        return view('main.index')->with(['projetos' => $projetos]);
-       
+        $data = $request->all();
+        $apoio = apoiadores_projeto::create($data);
+        //dd($apoio->id_projeto);
+        //dd($apoio->valor_doado);
+        $id = $apoio->id_projeto;
+        $projeto = projeto::find($id);
+        $valor = $apoio->valor_doado;
+        $valor_final = ($valor + $projeto->custo_atual_projeto);
+        $projeto = projeto::find($id)->update(['custo_atual_projeto' => $valor_final]);
+        return redirect()->route('projeto.index');
+   
     }
 
     public function show($id){

@@ -9,6 +9,7 @@
                 <tr>
                 <th scope="col">Projeto</th>
                 <th scope="col">Custo</th>
+                <th scope="col">Valor Arrecadado</th>
                 <th scope="col">Opções</th>
                 </tr>
             </thead>
@@ -17,6 +18,7 @@
                 @foreach($projetos as $projeto)
                 <td>{{ $projeto->nome_projeto }}</td>
                 <td>{{ $projeto->custo_projeto }}</td>
+                <td>{{ $projeto->custo_atual_projeto }}</td>
                 <td>
                         <!--<a href="{{ route('projeto.show', ['projeto' => $projeto->id_projeto]) }}">Visualizar</a>-->
                         <a href="{{ route('apoiadores_projeto.show', ['projeto' => $projeto->id_projeto]) }}">Apoiar</a>
