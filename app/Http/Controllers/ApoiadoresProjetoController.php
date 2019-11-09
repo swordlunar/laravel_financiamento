@@ -8,9 +8,7 @@ use GuzzleHttp\Exception\GuzzleException;
 
 use GuzzleHttp\Client;
 
-//use Illuminate\Http\Request;
-
-use Request;
+use Illuminate\Http\Request;
 
 use App\Http\Requests;
 
