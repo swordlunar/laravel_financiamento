@@ -88,6 +88,7 @@ class ApoiadoresProjetoController extends Controller
         ]);
         $a = response()->json(json_decode(($response->getBody()->getContents())));
         $url = ($a->getData()->data->link);
+        dd($a->getData()->data->link);
     }
 }
 
