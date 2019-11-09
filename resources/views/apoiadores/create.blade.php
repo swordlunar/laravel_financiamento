@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<form action ="{{ route('apoiadores_projeto.upload') }}" method='POST'>
+<form action ="{{ route('apoiadores_projeto.upload') }}" method='POST' enctype="multipart/form-data">
                         {{csrf_field()}}
                         <input name="_method" type="hidden" value="PATCH">
                         <div class="form-group">
