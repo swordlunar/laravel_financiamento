@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
     <div class="col-md-12"></div>
-        <form action ="{{ route('projeto.store') }}" class="form-horizontal" method='POST'>
+        <form action ="{{ route('projeto.store') }}" class="form-horizontal" method="POST" enctype="multipart/form-data">
         {{csrf_field()}}
             <div class="row">
             <div class="form-group">
@@ -28,6 +28,18 @@
             <div class="form-group">
                 <label>Tempo de Desenvolvimento do Projeto</label>
                 <input type="text" class="form-control" name="tempo_de_desenvolvimento">
+            </div>
+            </div>
+            <div class="row">
+            <div class="form-group">
+                <label for="recipient-name" class="col-form-label">Selecione o Arquivo:</label>
+                 <input type="file" class="form-control" name="foto1_projeto">
+            </div>
+            </div>
+            <div class="row">
+            <div class="form-group">
+                <label for="recipient-name" class="col-form-label">Selecione o Arquivo:</label>
+                 <input type="file" class="form-control" name="foto2_projeto">
             </div>
             </div>
             <div class="row">

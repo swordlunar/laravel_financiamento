@@ -10,6 +10,14 @@
                 {{ $projeto->custo_projeto}}
             <h3> Tempo Para Desenvolvimento do Projeto: </h3>
                 {{ $projeto->tempo_de_desenvolvimento}}
+                <figure>
+                    <img src='{{$projeto->foto1_projeto }}' alt="Minha Figura">	
+                    <figcaption>Informações da Figura</figcaption>
+                </figure>
+                <figure>
+                    <img src='{{$projeto->foto2_projeto }}' alt="Minha Figura">	
+                    <figcaption>Informações da Figura</figcaption>
+                </figure>
         </div>
     </div>
 @endsection

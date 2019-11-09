@@ -8,7 +8,9 @@ use GuzzleHttp\Exception\GuzzleException;
 
 use GuzzleHttp\Client;
 
-use Illuminate\Http\Request;
+//use Illuminate\Http\Request;
+
+use Request;
 
 use App\Http\Requests;
 
@@ -48,47 +50,6 @@ class ApoiadoresProjetoController extends Controller
         return view('apoiadores.show')->with(['projeto' => $projeto]);
     }
 
-    public function upload(Request $request)
-    {
 
-        /*
-        * O campo do form com o arquivo tinha o atributo name="file".
-        */
-        $file = $request->file('imagem1');
-
-        $image = Imgur::upload($file);
-
-        dd($image->link());
-
-        /*if (empty($file)) {
-            abort(400, 'Nenhum arquivo foi enviado.');
-        }
-
-        $path = $file->store('uploads');
-
-        // Faça qualquer coisa com o arquivo enviado...*/
-
-    }
-
-    public function update(Request $request)
-    {
-
-
-        //$file = $request->file('imagem1');
-
-        $client = new \GuzzleHttp\Client();
-
-        $response = $client->request('POST', 'https://api.imgur.com/3/image', [
-            'headers' => [
-                'authorization' => 'Client-ID ' . 'f5fe64a1d26152c',
-                'content-type' => 'application/x-www-form-urlencoded',
-            ],'form_params' => [
-                'image' => base64_encode(file_get_contents($request->file('imagem1')->path()))
-            ],
-        ]);
-        $a = response()->json(json_decode(($response->getBody()->getContents())));
-        $url = ($a->getData()->data->link);
-        dd($a->getData()->data->link);
-    }
 }
 
