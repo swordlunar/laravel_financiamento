@@ -18,11 +18,21 @@ use App\projeto;
 
 use Imgur;
 
+use DB;
+
 class ApoiadoresProjetoController extends Controller
 {
     public function __construct()
     {
         $this->middleware('auth');
+    }
+
+    public function index(){
+        $projetos = DB::table('projeto')
+            ->join('apoiadores_projeto', 'projeto.id_projeto', '=', 'apoiadores_projeto.id_projeto')
+            ->select('projeto.*', 'apoiadores_projeto.*')
+            ->get();
+            return view('apoiadores.projetosapoiados')->with(['projetos' => $projetos]);    
     }
 
     public function create(){
