@@ -51,7 +51,7 @@
                 </button>
 
                 <!-- Branding Image -->
-                <a class="navbar-brand" href="{{ url('/') }} " style="color: white">
+                <a class="navbar-brand" href="{{ url('/home') }} " style="color: white">
                     Sistema de Financiamento
                 </a>
             </div>
