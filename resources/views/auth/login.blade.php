@@ -70,7 +70,7 @@
                     </div>
 
                     <div class="form-group" style="text-align:center">
-                            <button type="submit" class="btn btn-primary" style="background-color: #186180;border-color: #186180">
+                            <button type="submit" class="btn btn-primary" style="background-color: #007680;border-color: #007680">
                                 <i class="fa fa-btn fa-sign-in"></i> Login
                             </button>
 

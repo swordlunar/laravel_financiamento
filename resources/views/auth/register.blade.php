@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Login</title>
+    <title>Registro</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css" integrity="sha384-XdYbMnZ/QjLh6iI4ogqCTaIjrFk87ip+ekIjefZch0Y+PvJ8CDYtEs1ipDmPorQ+" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700">
@@ -81,7 +81,7 @@
                             </div>
 
                             <div class="form-group" style="text-align:center">
-                                    <button type="submit" class="btn btn-primary" style="background-color: #186180;border-color: #186180">
+                                    <button type="submit" class="btn btn-primary" style="background-color: #007680;border-color: #007680">
                                         <i class="fa fa-btn fa-user"></i> Registrar
                                     </button>
                             </div>
