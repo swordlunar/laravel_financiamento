@@ -5,8 +5,6 @@
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
 
   <title>Início</title>
 
@@ -40,7 +38,7 @@
     <!-- /#sidebar-wrapper -->
 
     <!-- Page Content -->
-    <div id="page-content-wrapper">
+    <div id="page-content-wrapper" style="width:100%">
 
       <nav class="navbar navbar-expand-lg navbar-light border-bottom" style="background-color: #007680; border-color:#007680">
         <button class="btn btn-primary" id="menu-toggle" style="background-color: white;border-color: white"><i class="fas fa-exchange-alt" style="color: #007680;font-size: 20px;"></i></button>
@@ -56,7 +54,7 @@
                 {{ Auth::user()->name }} <span class="caret"></span>
               </a>
             </li>
-            
+            &nbsp;&nbsp;&nbsp;&nbsp;
             <li class="nav-item active">
               <a href="{{ url('/logout') }}" style="color: white;">
                 <i class="fa fa-btn fa-sign-out" style="color: white"></i>Logout
@@ -66,11 +64,14 @@
         </div>
       </nav>
 
-      @yield('content')
+      <div class="container-fluid">
+        @yield('content')
+      </div>
 
     </div>
   </div>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
   {{-- <script src="{{ elixir('js/app.js') }}"></script> --}}
   <script>
