@@ -15,7 +15,7 @@
                     <td style="border-top:0px solid">
 
                     <div class="card" style="width: 18rem;">
-                        <img src="..." class="card-img-top" alt="...">
+                        <img src='{{$projeto->foto1_projeto }}' alt="Minha Figura" style="height:170px">	
                         <div class="card-body">
                             <h5 class="card-title">{{ $projeto->nome_projeto }}</h5>
                             <p class="card-text">
