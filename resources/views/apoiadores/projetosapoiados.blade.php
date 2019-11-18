@@ -8,9 +8,9 @@
                 <tbody>
                   <tr class="row">
                     @foreach($projetos as $projeto)
-
-                    @if ($projeto->id_criador != Auth::user()->id )
-                      <p></p>
+                    
+                    @if ($projeto->id_apoiador == Auth::user()->id )
+                      
 
                     <td style="border-top:0px solid">
 

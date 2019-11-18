@@ -93,7 +93,7 @@ class ProjetoController extends Controller
             ->where('created_at', $criadoem)
             ->update(['foto1_projeto' => $url1,'foto2_projeto' => $url2]);
 
-        return view('welcome');
+        return view('main.create');
        
     }
 

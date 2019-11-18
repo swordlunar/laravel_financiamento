@@ -10,21 +10,21 @@
                 <div class="form-group">
                     <input hidden type="hidden" class="form-control" name="id_criador" value="{{ Auth::user()->id }}">
                     <label>Nome do Projeto</label>
-                    <input type="text" class="form-control" name="nome_projeto">
+                    <input type="text" class="form-control" name="nome_projeto" required>
                 </div>
                 <div class="form-group">
                     <label>Descrição do Projeto</label>
-                    <input type="textarea" class="form-control" name="descricao_projeto">
+                    <input type="textarea" class="form-control" name="descricao_projeto" required>
                 </div>
 
                 <div class="form-row">
                     <div class="col">
                         <label>Custo do Projeto</label>
-                        <input type="text" class="form-control" name="custo_projeto">
+                        <input type="text" class="form-control" name="custo_projeto" required>
                     </div>
                     <div class="col">
                         <label>Tempo de Desenvolvimento do Projeto</label>
-                        <input type="text" class="form-control" name="tempo_de_desenvolvimento">
+                        <input type="text" class="form-control" name="tempo_de_desenvolvimento" required>
                     </div>
                 </div>
 
@@ -40,7 +40,7 @@
                 </div>
 
                 <div class="form-group" style="margin-top:5%; text-align:center;">
-                    <button type="submit" class="btn btn-primary" style="width:200px;background-color: #007680;border-color: #007680">Enviar</button>
+                    <button type="submit" onclick="return confirm('Deseja realmente criar esse projeto?')" class="btn btn-primary" style="width:200px;background-color: #007680;border-color: #007680">Enviar</button>
                 </div>
 
             </form>

@@ -3,14 +3,14 @@
 @section('content')
 
     <div class="row" style="justify-content:center">
-        <div class="col-md-10 col-md-offset-1">
+        <div class="col-md-12">
             <form action ="{{ route('projeto.update', ['projeto' => $projeto->id_projeto]) }}" class="form-horizontal" method='POST'>
                 {{csrf_field()}}
                 {{ method_field('PUT') }}
                 <h1 style="text-align:center;margin-bottom:5%;margin-top:5%;font-size:30px;color: #007680"><b>Editar Projeto</b></h1>
                 <div class="form-group">
                     <label>Nome do Projeto</label>
-                    <input type="text" class="form-control" name="nome_projeto" value="{{ old('projeto', $projeto->nome_projeto) }}">
+                    <input type="text" class="form-control" name="nome_projeto" value="{{ old('projeto', $projeto->nome_projeto) }}" >
                 </div>
 
                 <div class="form-group">
@@ -49,8 +49,22 @@
                 </div>
 
                 @endif
+                <div class="form-row">
+                    <div class="col">               
+                        <figure>
+                            <img src='{{$projeto->foto1_projeto }}' alt="Imagem1" style="max-width: 500px">	
+                            <!-- <figcaption>Informações da Figura</figcaption> -->
+                        </figure>
+                    </div>
+                    <div class="col">
+                        <figure>
+                            <img src='{{$projeto->foto2_projeto }}' alt="Imagem2"  style="max-width: 500px">	
+                            <!-- <figcaption>Informações da Figura</figcaption> -->
+                        </figure>
+                    </div>
+                </div>
                 <div class="form-group" style="margin-top:5%; text-align:center;">
-                <button style="width:200px;background-color: #007680;border-color: #007680" type="submit" class="btn btn-primary">Enviar</button>
+                <button style="width:200px;background-color: #007680;border-color: #007680" type="submit" class="btn btn-primary" onclick="return confirm('Deseja realmente editar esse projeto?')">Editar Projeto</button>
             </div>
             </form>
         </div>
