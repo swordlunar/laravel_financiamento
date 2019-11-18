@@ -17,11 +17,13 @@
                         <div class="card-body">
                             <h5 class="card-title">{{ $projeto->nome_projeto }}</h5>
                             <p class="card-text">
-                                custo do projeto: {{ $projeto->custo_projeto }}
+                                Custo do Projeto: {{ $projeto->custo_projeto }}
                             </p>
-                            <a href="{{ route('projeto.show', ['projeto' => $projeto->id_projeto]) }}">Visualizar</a>
-                            <a href="{{ route('projeto.edit', ['projeto' => $projeto->id_projeto]) }}">Editar</a>
-                            <a href="{{ route('projeto.destroy', ['projeto' => $projeto->id_projeto]) }}">Apagar</a>
+                            <div style="text-align:center">
+                              <a style="color: #007680" href="{{ route('projeto.show', ['projeto' => $projeto->id_projeto]) }}">Visualizar <i class="fas fa-eye"></i></a><br>
+                              <a style="color: #007680" href="{{ route('projeto.edit', ['projeto' => $projeto->id_projeto]) }}">Editar <i class="fas fa-edit"></i></a><br>
+                              <a style="color: #007680" href="{{ route('projeto.destroy', ['projeto' => $projeto->id_projeto]) }}">Apagar <i class="fas fa-trash-alt"></i></a>
+                            </div>
                         </div>
                     </div>
                         

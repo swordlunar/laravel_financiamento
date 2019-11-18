@@ -3,7 +3,7 @@
 @section('content')
     
     <div class="row" style="justify-content:center">
-        <div class="col-md-8 col-md-offset-2">
+        <div class="col-md-10 col-md-offset-1">
         <form action ="{{ route('projeto.store') }}" class="form-horizontal" method="POST" enctype="multipart/form-data">
             {{csrf_field()}}
             <h1 style="text-align:center;margin-bottom:5%;margin-top:5%;font-size:30px;color: #007680"><b>Criar Projeto</b></h1>
@@ -39,8 +39,8 @@
                     </div>
                 </div>
 
-                <div class="form-group" style="margin-top:5%; text-align:end;">
-                    <button type="submit" class="btn btn-primary" style="width:200px;background-color: #007680;border-color: #007680"><b>Enviar</b></button>
+                <div class="form-group" style="margin-top:5%; text-align:center;">
+                    <button type="submit" class="btn btn-primary" style="width:200px;background-color: #007680;border-color: #007680">Enviar</button>
                 </div>
 
             </form>

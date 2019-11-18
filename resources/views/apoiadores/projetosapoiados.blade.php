@@ -19,10 +19,13 @@
                         <div class="card-body">
                             <h5 class="card-title">{{ $projeto->nome_projeto }}</h5>
                             <p class="card-text">
-                                custo do projeto: {{ $projeto->custo_projeto }}
-                                valor doado: {{ $projeto->valor_doado}}
+                                Custo do Projeto: {{ $projeto->custo_projeto }}
+                                <br>
+                                Valor Doado: {{ $projeto->valor_doado}}
                             </p>
-                                <a href="{{ route('apoiadores_projeto.show', ['projeto' => $projeto->id_projeto]) }}">Apoiar</a>
+                                <div style="text-align:center">
+                                  <a style="color: #007680" href="{{ route('apoiadores_projeto.show', ['projeto' => $projeto->id_projeto]) }}">Apoiar <i class="fas fa-hands-helping"></i></a>
+                                </div>
                         </div>
                     </div>
                         
