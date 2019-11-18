@@ -1,10 +1,12 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="row">
-        <div class="col-md-10 col-md-offset-1">
+    
+    <div class="row" style="justify-content:center">
+        <div class="col-md-8 col-md-offset-2">
         <form action ="{{ route('projeto.store') }}" class="form-horizontal" method="POST" enctype="multipart/form-data">
             {{csrf_field()}}
+            <h1 style="text-align:center;margin-bottom:5%;margin-top:5%;font-size:30px;color: #007680"><b>Criar Projeto</b></h1>
                 <div class="form-group">
                     <input hidden type="hidden" class="form-control" name="id_criador" value="{{ Auth::user()->id }}">
                     <label>Nome do Projeto</label>
@@ -15,28 +17,30 @@
                     <input type="textarea" class="form-control" name="descricao_projeto">
                 </div>
 
-                <div class="form-group">
-                    <label>Custo do Projeto</label>
-                    <input type="text" class="form-control" name="custo_projeto">
+                <div class="form-row">
+                    <div class="col">
+                        <label>Custo do Projeto</label>
+                        <input type="text" class="form-control" name="custo_projeto">
+                    </div>
+                    <div class="col">
+                        <label>Tempo de Desenvolvimento do Projeto</label>
+                        <input type="text" class="form-control" name="tempo_de_desenvolvimento">
+                    </div>
                 </div>
 
-                <div class="form-group">
-                    <label>Tempo de Desenvolvimento do Projeto</label>
-                    <input type="text" class="form-control" name="tempo_de_desenvolvimento">
+                <div class="form-row">
+                    <div class="col">
+                        <label for="recipient-name" class="col-form-label">Imagem 1</label>
+                        <input type="file" class="form-control" name="foto1_projeto">
+                    </div>
+                    <div class="col">
+                        <label for="recipient-name" class="col-form-label">Imagem 2</label>
+                        <input type="file" class="form-control" name="foto2_projeto">
+                    </div>
                 </div>
 
-                <div class="form-group">
-                    <label for="recipient-name" class="col-form-label">Selecione o Arquivo:</label>
-                    <input type="file" class="form-control" name="foto1_projeto">
-                </div>
-
-                <div class="form-group">
-                    <label for="recipient-name" class="col-form-label">Selecione o Arquivo:</label>
-                    <input type="file" class="form-control" name="foto2_projeto">
-                </div>
-
-                <div class="form-group">
-                    <button type="submit" class="btn btn-primary">Enviar</button>
+                <div class="form-group" style="margin-top:5%; text-align:end;">
+                    <button type="submit" class="btn btn-primary" style="width:200px;background-color: #007680;border-color: #007680"><b>Enviar</b></button>
                 </div>
 
             </form>
