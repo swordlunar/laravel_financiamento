@@ -5,10 +5,17 @@
     <div class="row">
         <div class="col-md-10 col-md-offset-1">
             <div class="panel panel-default">
-                <div class="panel-heading">Dashboard</div>
+                <div class="panel-heading">
+                <center><h1>Atividade Avaliativa da N2 de PSW II<h1></center>
+                </div>
 
                 <div class="panel-body">
-                    Você está Logado no Sistema de Financiamento de Projetos!
+                <center>
+                    <h1>Equipe:</h1>
+                    <h5> Cicero Danilo Roseno Felix </h5>
+                    <h5> Cleberson Cardoso Aguiar </h5>
+                    <h5> Lucas Tavares Freire </h5>
+                </center>
                 </div>
             </div>
         </div>
