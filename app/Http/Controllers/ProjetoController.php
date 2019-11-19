@@ -16,6 +16,8 @@ use App\Http\Requests;
 
 use App\projeto;
 
+use Illuminate\Support\Facades\Input;
+
 use DB;
 
 class ProjetoController extends Controller
@@ -113,8 +115,69 @@ class ProjetoController extends Controller
     }
 
     public function update(Request $request, $id){
-        $projeto = projeto::find($id)->update($request->all());
-        return redirect()->route('projeto.index');
+        //$projeto = projeto::find($id)->update($request->all());
+        //return redirect()->route('projeto.index');
+
+        $data = $request->all();
+
+        $projetocriado = projeto::where('id_projeto', $id)->get()->first();
+        $titulo = Input::get('nome_projeto');
+        $descr = Input::get('descricao_projeto');
+        $custo = Input::get('custo_projeto');
+        $tempo = Input::get('tempo_de_desenvolvimento');
+        $status = Input::get('status_projeto');
+
+        $file1 = $request->hasFile('foto1_projeto');
+
+        if ($file1) {
+        
+        $client = new \GuzzleHttp\Client();
+
+        $response = $client->request('POST', 'https://api.imgur.com/3/image', [
+            'headers' => [
+                'authorization' => 'Client-ID ' . 'f5fe64a1d26152c',
+                'content-type' => 'application/x-www-form-urlencoded',
+            ],'form_params' => [
+                'image' => base64_encode(file_get_contents($request->file('foto1_projeto')->path()))
+            ],
+        ]);
+        $a = response()->json(json_decode(($response->getBody()->getContents())));
+
+        $url1 = ($a->getData()->data->link);
+
+        } else {
+            $url1 = $projetocriado->foto1_projeto;
+        }
+
+        $file2 = $request->hasFile('foto2_projeto');        
+
+        if ($file2) {
+        
+            $client = new \GuzzleHttp\Client();
+    
+            $response = $client->request('POST', 'https://api.imgur.com/3/image', [
+                'headers' => [
+                    'authorization' => 'Client-ID ' . 'f5fe64a1d26152c',
+                    'content-type' => 'application/x-www-form-urlencoded',
+                ],'form_params' => [
+                    'image' => base64_encode(file_get_contents($request->file('foto2_projeto')->path()))
+                ],
+            ]);
+            $a = response()->json(json_decode(($response->getBody()->getContents())));
+    
+            $url2 = ($a->getData()->data->link);
+    
+            } else {
+                $url2 = $projetocriado->foto2_projeto;
+            }
+
+        DB::table('projeto')
+            ->where('id_projeto', $id)
+            ->update(['nome_projeto'=> $titulo, 'descricao_projeto' => $descr, 'custo_projeto' => $custo, 'tempo_de_desenvolvimento' => $tempo, 'foto1_projeto' => $url1,'foto2_projeto' => $url2]);
+
+        return view('main.create');
+       
+
     }
 
     public function destroy($id){

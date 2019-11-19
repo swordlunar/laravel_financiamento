@@ -6,8 +6,8 @@
             <h2 style="text-align:center; margin-top:4%">{{ $projeto->nome_projeto}}</h2>
             <hr>
             <p><h4>Descrição:</h4> {{ $projeto->descricao_projeto}}</p>
-            <p> <h4>Custo do Projeto:</h4> {{ $projeto->custo_projeto}}</p>
-            <p> <h4>Tempo Para Desenvolvimento do Projeto:</h4> {{ $projeto->tempo_de_desenvolvimento}}</p>
+            <p> <h4>Custo do Projeto:</h4> R$ {{ $projeto->custo_projeto}}</p>
+            <p> <h4>Tempo Para Desenvolvimento do Projeto:</h4> {{ $projeto->tempo_de_desenvolvimento}} Dias</p>
             <p> <h4>Imagens:</h4><br>
                 <div class="row">
                     <div class="col-md-6">                
