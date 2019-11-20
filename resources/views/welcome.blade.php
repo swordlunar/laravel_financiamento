@@ -44,7 +44,7 @@
                 <div class="col-md-2">
                 </div>
                 <div class="col-md-8" style="text-align:center;">
-                    <p style="margin-left:34%;margin-top:3%;font-size:50px; color:white"><b>Bem vindo ao Sistema de Financiamentos!</b></p>
+                    <p style="margin-left:34%;margin-top:3%;font-size:50px; color:white"><b>Bem vindo ao Sistema de Financiamento de Projetos!</b></p>
                 </div>
                 <div class="col-md-2">
                 </div>
