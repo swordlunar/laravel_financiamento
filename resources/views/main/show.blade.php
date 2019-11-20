@@ -3,12 +3,12 @@
 @section('content')
     <div class="container">
         <div class="col-md-12">
-            <h2 style="text-align:center; margin-top:4%">{{ $projeto->nome_projeto}}</h2>
+            <h2 style="text-align:center; margin-top:4%; color:#007680"><b>{{ $projeto->nome_projeto}}</b></h2>
             <hr>
-            <p><h4>Descrição:</h4> {{ $projeto->descricao_projeto}}</p>
-            <p> <h4>Custo do Projeto:</h4> R$ {{ $projeto->custo_projeto}}</p>
-            <p> <h4>Tempo Para Desenvolvimento do Projeto:</h4> {{ $projeto->tempo_de_desenvolvimento}} Dias</p>
-            <p> <h4>Imagens:</h4><br>
+            <p><h4 style=";color:#007680"><b>Descrição:</b></h4>{{ $projeto->descricao_projeto}}</p>
+            <p> <h4 style=";color:#007680"><b>Custo do Projeto:</b></h4> R$ {{ $projeto->custo_projeto}}</p>
+            <p> <h4 style=";color:#007680"><b>Tempo Para Desenvolvimento do Projeto:</b></h4> {{ $projeto->tempo_de_desenvolvimento}} Dias</p>
+            <p> <h4 style=";color:#007680"><b>Imagens:</b></h4><br>
                 <div class="row">
                     <div class="col-md-6">                
                         <figure>

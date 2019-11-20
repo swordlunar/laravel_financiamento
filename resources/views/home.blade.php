@@ -5,10 +5,10 @@
     <div class="row">
         <div class="col-md-10 col-md-offset-1">
             <div class="panel panel-default">
-                <div class="panel-heading">
-                <center><h1>Atividade Avaliativa da N2 de PSW II<h1></center>
+                <div class="panel-heading" style="margin-top:20%;color:#007680">
+                <center><h1><b>Atividade Avaliativa da N2 de PSW II</b><h1></center>
                 </div>
-
+                
                 <div class="panel-body">
                 <center>
                     <h1>Equipe:</h1>

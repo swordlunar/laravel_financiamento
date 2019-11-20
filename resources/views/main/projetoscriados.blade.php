@@ -15,7 +15,7 @@
                     <div class="card" style="width: 17rem">
                         <img src='{{$projeto->foto1_projeto }}' alt="Minha Figura" style="height:170px">	
                         <div class="card-body">
-                            <h5 class="card-title">{{ $projeto->nome_projeto }}</h5>
+                            <h5 class="card-title" style="color: #007680"><b>{{ $projeto->nome_projeto }}</b></h5>
                             <p class="card-text">
                                 Custo do Projeto: R$ {{ $projeto->custo_projeto }}
                             </p>
