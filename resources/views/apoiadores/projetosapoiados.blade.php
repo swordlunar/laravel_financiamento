@@ -19,9 +19,9 @@
                         <div class="card-body">
                             <h5 class="card-title " style="color: #007680"><b>{{ $projeto->nome_projeto }}</b></h5>
                             <p class="card-text">
-                                Custo do Projeto: {{ $projeto->custo_projeto }}
+                                Custo do Projeto: R$ {{ $projeto->custo_projeto }}
                                 <br>
-                                Valor Doado: {{ $projeto->valor_doado}}
+                                Valor Doado: R$ {{ $projeto->valor_doado}}
                             </p>
                                 <div style="text-align:center">
                                   <a style="color: #007680" href="{{ route('apoiadores_projeto.show', ['projeto' => $projeto->id_projeto]) }}">Apoiar <i class="fas fa-hands-helping"></i></a>
