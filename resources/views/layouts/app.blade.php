@@ -26,7 +26,7 @@
 
     <!-- Sidebar -->
     <div class="border-right" id="sidebar-wrapper" style="background-color: #007680; border-color:#007680">
-      <div class="sidebar-heading" style="color: white;"><b><a class="navbar-brand" href="{{ url('/home') }} " style="color: white">Sistema de <br>Financiamentos</a> </b></div>
+      <div class="sidebar-heading" style="color: white;"><b><a class="navbar-brand" href="{{ url('/home') }} " style="color: white">Sistema de <br>Financiamentos <br>de Projetos</a> </b></div>
       <div class="list-group list-group-flush" style="margin-top:20%;">
         <a href="{{ url('/home') }}" class="list-group-item list-group-item-action" style="color: white;background-color: #007680"><b>Início</b></a>
         <a href="{{ url('/projeto') }}" class="list-group-item list-group-item-action" style="color: white;background-color: #007680"><b>Projetos</b></a>

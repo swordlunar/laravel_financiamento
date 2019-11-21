@@ -21,7 +21,7 @@
         <div class="row"  style="margin-top:1%">
             <div class="col-md-4">
                 <a href="{{ url('/home') }} " style="color: white;font-size:25px">
-                    <b>Sistema de Financiamento</b>
+                    <b>Sistema de Financiamento de Projetos</b>
                 </a>
             </div>
             <div class="col-md-4"></div>

@@ -21,7 +21,7 @@
                             <p class="card-text">
                                 Custo do Projeto: {{ $projeto->custo_projeto }}
                                 <br>
-                                Custo Atual: {{ $projeto->custo_atual_projeto }}
+                                Valor Arrecadado: {{ $projeto->custo_atual_projeto }}
                             </p>
                             <div style="; text-align:center">
                             <a style="color: #007680" href="{{ route('apoiadores_projeto.show', ['projeto' => $projeto->id_projeto]) }}">Apoiar <i class="fas fa-hands-helping"></i></a>
