@@ -1,5 +1,7 @@
 @extends('layouts.app')
-
+<head>
+<title> Projeto Apoiado </title>
+</head>
 @section('content')
     <div class="container">
         <div class="col-md-12">

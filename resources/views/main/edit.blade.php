@@ -1,5 +1,7 @@
 @extends('layouts.app')
-
+<head>
+<title> Editar Projeto </title>
+</head>
 @section('content')
 
     <div class="row" style="justify-content:center">
