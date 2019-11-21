@@ -126,7 +126,7 @@ class ProjetoController extends Controller
         $custo = Input::get('custo_projeto');
         $tempo = Input::get('tempo_de_desenvolvimento');
         $status = Input::get('status_projeto');
-
+        
         $file1 = $request->hasFile('foto1_projeto');
 
         if ($file1) {
@@ -173,7 +173,7 @@ class ProjetoController extends Controller
 
         DB::table('projeto')
             ->where('id_projeto', $id)
-            ->update(['nome_projeto'=> $titulo, 'descricao_projeto' => $descr, 'custo_projeto' => $custo, 'tempo_de_desenvolvimento' => $tempo, 'foto1_projeto' => $url1,'foto2_projeto' => $url2]);
+            ->update(['nome_projeto'=> $titulo, 'descricao_projeto' => $descr, 'custo_projeto' => $custo, 'tempo_de_desenvolvimento' => $tempo, 'status_projeto' => $status, 'foto1_projeto' => $url1,'foto2_projeto' => $url2]);
 
         return view('main.create');
        
