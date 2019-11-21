@@ -9,7 +9,7 @@
                   <tr class="row">
                     @foreach($projetos as $projeto)
 
-                    @if ($projeto->id_criador != Auth::user()->id )
+                    @if ($projeto->id_criador != Auth::user()->id && $projeto->custo_projeto >= $projeto->custo_atual_projeto)
                       <p></p>
 
                     <td style="border-top:0px solid">
