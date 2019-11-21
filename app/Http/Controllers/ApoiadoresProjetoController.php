@@ -49,7 +49,8 @@ class ApoiadoresProjetoController extends Controller
         $valor = $apoio->valor_doado;
         $valor_final = ($valor + $projeto->custo_atual_projeto);
         $projeto = projeto::find($id)->update(['custo_atual_projeto' => $valor_final]);
-        return redirect()->route('projeto.index');
+        return redirect()->route('apoiadores_projeto.index');
+        //return redirect()->route('projeto.index');
    
     }
 

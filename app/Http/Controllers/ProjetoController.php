@@ -95,7 +95,8 @@ class ProjetoController extends Controller
             ->where('created_at', $criadoem)
             ->update(['foto1_projeto' => $url1,'foto2_projeto' => $url2]);
 
-        return view('main.create');
+            return redirect()->route('projeto.mostrar', [auth()->user()->id]);
+            //return view('main.create');
        
     }
 
@@ -175,13 +176,14 @@ class ProjetoController extends Controller
             ->where('id_projeto', $id)
             ->update(['nome_projeto'=> $titulo, 'descricao_projeto' => $descr, 'custo_projeto' => $custo, 'tempo_de_desenvolvimento' => $tempo, 'status_projeto' => $status, 'foto1_projeto' => $url1,'foto2_projeto' => $url2]);
 
-        return view('main.create');
+            $projeto = projeto::find($id);
+            return view('main.edit')->with(['projeto' => $projeto]);
        
 
     }
 
     public function destroy($id){
         $projeto = projeto::find($id)->delete();
-        return redirect()->route('projeto.index');
+        return redirect()->route('projeto.mostrar', [auth()->user()->id]);
     }
 }

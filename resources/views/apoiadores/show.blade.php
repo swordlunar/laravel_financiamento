@@ -48,7 +48,7 @@
                         <input type="hidden" class="form-control" name="id_apoiador" value="{{ Auth::user()->id }}">
                         <div class="form-group">
                             <label for="recipient-name" class="col-form-label">Valor do apoio:</label>
-                            <input type="text" class="form-control" name="valor_doado">
+                            <input type="text" class="form-control" name="valor_doado" required>
                         </div>
                     </div>
                     <div class="modal-footer" style="justify-content:center">

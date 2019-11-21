@@ -24,7 +24,7 @@
                                 Valor Doado: R$ {{ $projeto->valor_doado}}
                             </p>
                                 <div style="text-align:center">
-                                  <a style="color: #007680" href="{{ route('apoiadores_projeto.show', ['projeto' => $projeto->id_projeto]) }}">Apoiar <i class="fas fa-hands-helping"></i></a>
+                                  <a style="color: #007680" href="{{ route('apoiadores_projeto.show', ['projeto' => $projeto->id_projeto]) }}">Apoiar Novamente <i class="fas fa-hands-helping"></i></a>
                                 </div>
                         </div>
                     </div>
