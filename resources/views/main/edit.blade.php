@@ -75,6 +75,7 @@
                 </div>
                 
                 <div class="form-group" style="margin-top:5%; text-align:center;">
+                <a href="{{ route('projeto.mostrar', [auth()->user()->id]) }}"><button style="width:200px;background-color: #ffffff;border-color: #007680; color:#007680 " type="button" class="btn btn-primary">Voltar</button></a>
                 <button style="width:200px;background-color: #007680;border-color: #007680" type="submit" class="btn btn-primary" onclick="return confirm('Deseja realmente editar esse projeto?')">Editar Projeto</button>
             </div>
             </form>
